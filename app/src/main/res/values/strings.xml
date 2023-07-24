@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">SegundoAndroidAvanzado</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="listado_de_heroes">Listado de Heroes</string>
+    <string name="nombre_heroe_placeholder">Nombre Heroe</string>
+</resources>
