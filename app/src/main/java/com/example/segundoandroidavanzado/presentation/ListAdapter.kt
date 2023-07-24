@@ -21,10 +21,4 @@ class ListAdapter(private var list: List<HeroModel> = listOf()): RecyclerView.Ad
     override fun onBindViewHolder(holder: HeroViewholder, position: Int) {
         holder.bind(list[position], position)
     }
-    fun submit(list: List<HeroModel>){
-        this.list = list
-        notifyDataSetChanged()
-
-
-    }
 }

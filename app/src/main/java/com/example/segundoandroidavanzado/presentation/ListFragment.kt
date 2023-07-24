@@ -24,7 +24,6 @@ class ListFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        binding.rvHeroList.adapter = ListAdapter()
         listViewModel.heroList.observe(viewLifecycleOwner){ heroList ->
             initList(heroList)
         }
