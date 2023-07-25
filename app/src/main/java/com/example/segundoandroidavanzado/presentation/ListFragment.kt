@@ -41,6 +41,8 @@ class ListFragment : Fragment() {
     }
 
     private fun initList(data: List<HeroModel>) = binding.rvHeroList.run {
-        adapter = ListAdapter(data)
+        adapter = ListAdapter(data){
+            //TODO navigate to detail
+        }
     }
 }

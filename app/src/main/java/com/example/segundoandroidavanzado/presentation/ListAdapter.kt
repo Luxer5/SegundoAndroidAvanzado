@@ -6,7 +6,10 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.segundoandroidavanzado.databinding.ItemHeroBinding
 import com.example.segundoandroidavanzado.domain.model.HeroModel
 
-class ListAdapter(private var list: List<HeroModel> = listOf()): RecyclerView.Adapter<HeroViewholder>(){
+class ListAdapter(
+    private var list: List<HeroModel> = listOf(),
+    private var onclick: (HeroModel) -> Unit
+    ): RecyclerView.Adapter<HeroViewholder>(){
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): HeroViewholder {
         return HeroViewholder(
@@ -19,6 +22,7 @@ class ListAdapter(private var list: List<HeroModel> = listOf()): RecyclerView.Ad
     }
 
     override fun onBindViewHolder(holder: HeroViewholder, position: Int) {
-        holder.bind(list[position], position)
+        holder.bind(list[position], onclick)
+
     }
 }

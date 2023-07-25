@@ -11,7 +11,7 @@ class HeroViewholder(
     private val binding: ItemHeroBinding
 ) :RecyclerView.ViewHolder(binding.root ){
 
-    fun bind(hero:HeroModel, position: Int){
+    fun bind(hero:HeroModel, onClick:(HeroModel) -> Unit){
         binding.tvName.text = hero.name
 
         Glide.with(binding.root.context)
@@ -19,6 +19,10 @@ class HeroViewholder(
             .diskCacheStrategy(DiskCacheStrategy.ALL)
             .centerCrop()
             .into(binding.imageView)
+
+        binding.root.setOnClickListener {
+            onClick(hero)
+        }
     }
 
 }
