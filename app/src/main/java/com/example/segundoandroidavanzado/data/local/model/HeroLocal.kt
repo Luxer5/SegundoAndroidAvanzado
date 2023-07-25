@@ -9,5 +9,6 @@ data class HeroLocal (
     @PrimaryKey @ColumnInfo(name = "id") val id: String,
     @ColumnInfo(name = "name") val name: String,
     @ColumnInfo(name = "photoUrl") val photoUrl: String,
-    @ColumnInfo(name = "favorite") val favorite: Boolean
+    @ColumnInfo(name = "favorite") val favorite: Boolean,
+    @ColumnInfo(name = "description") val description: String
 )

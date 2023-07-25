@@ -32,6 +32,8 @@ class DetailFragment : Fragment() {
         detailViewModel.getHero(args.heroId)
         detailViewModel.hero.observe(viewLifecycleOwner){hero ->
             binding.name.text = hero.name
+            binding.description.text = hero.description
+            //TODO binding.description =hero.description
             Glide.with(binding.root.context)
                 .load(hero.photoUrl)
                 .diskCacheStrategy(DiskCacheStrategy.ALL)

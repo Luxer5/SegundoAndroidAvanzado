@@ -5,18 +5,21 @@ import com.example.segundoandroidavanzado.domain.model.HeroModel
 fun HeroDTO.toHeroModel() = HeroModel(
     name = name?: "",
     photoUrl = photo?: "",
-    id = id?:""
+    id = id?:"",
+    description = description?:""
 )
 
 fun HeroDTO.toHeroLocal() = HeroLocal(
     id = id?: "",
     name = name?: "",
     photoUrl = photo?: "",
-    favorite = favorite?: false
+    favorite = favorite?: false,
+    description = description?: ""
 )
 
 fun HeroLocal.toHeroModel() = HeroModel(
     name = name,
     photoUrl = photoUrl,
-    id = id
+    id = id,
+    description = description
 )
