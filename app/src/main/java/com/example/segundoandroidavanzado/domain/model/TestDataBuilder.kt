@@ -1,6 +1,7 @@
 package com.example.segundoandroidavanzado.domain.model
 
 class TestDataBuilder() {
+    var id = ""
     var name = ""
     var photoUrl = ""
     var numElements: Int = 1
@@ -21,7 +22,7 @@ class TestDataBuilder() {
     fun build():List<HeroModel>{
         val list = mutableListOf<HeroModel>()
         for(i in 0 .. numElements){
-            list.add(HeroModel(name, photoUrl))
+            list.add(HeroModel(id,name, photoUrl))
         }
         return list.toList()
     }

@@ -4,7 +4,8 @@ import com.example.segundoandroidavanzado.domain.model.HeroModel
 
 fun HeroDTO.toHeroModel() = HeroModel(
     name = name?: "",
-    photoUrl = photo?: ""
+    photoUrl = photo?: "",
+    id = id?:""
 )
 
 fun HeroDTO.toHeroLocal() = HeroLocal(
@@ -16,5 +17,6 @@ fun HeroDTO.toHeroLocal() = HeroLocal(
 
 fun HeroLocal.toHeroModel() = HeroModel(
     name = name,
-    photoUrl = photoUrl
+    photoUrl = photoUrl,
+    id = id
 )

@@ -1,4 +1,4 @@
-package com.example.segundoandroidavanzado.presentation
+package com.example.segundoandroidavanzado.presentation.list
 
 import android.content.Context
 import androidx.lifecycle.LiveData

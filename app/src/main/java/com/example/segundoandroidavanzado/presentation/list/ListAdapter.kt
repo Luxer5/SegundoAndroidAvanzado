@@ -1,4 +1,4 @@
-package com.example.segundoandroidavanzado.presentation
+package com.example.segundoandroidavanzado.presentation.list
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
