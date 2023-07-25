@@ -28,4 +28,6 @@ class HeroRepositoryImpl(
             }
         }
     }
+
+    override suspend fun getHeroById(id: String): HeroModel = localDataSource.getHeroById(id).toHeroModel()
 }

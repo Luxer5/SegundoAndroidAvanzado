@@ -13,6 +13,10 @@ interface HeroDao {
     @Query("SELECT * FROM SuperHeroTable")
     suspend fun getAll(): List<HeroLocal>
 
+    @Query("SELECT * FROM SuperHeroTable WHERE id=:id")
+    suspend fun getHeroById(id:String): HeroLocal
+
+
     @Query("SELECT * FROM SuperHeroTable")
     suspend fun getFavorites(): List<HeroLocal>
 

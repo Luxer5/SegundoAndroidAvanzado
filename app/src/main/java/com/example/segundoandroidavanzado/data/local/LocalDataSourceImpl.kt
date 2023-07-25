@@ -10,4 +10,5 @@ class LocalDataSourceImpl(
     }
 
     override suspend fun getHeroList(): List<HeroLocal> = heroDao.getAll()
+    override suspend fun getHeroById(id: String): HeroLocal =heroDao.getHeroById(id )
 }
