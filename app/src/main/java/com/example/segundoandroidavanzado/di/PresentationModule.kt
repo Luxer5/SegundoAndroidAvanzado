@@ -6,7 +6,7 @@ import org.koin.androidx.viewmodel.dsl.viewModelOf
 import org.koin.dsl.module
 
 val pesentationModule = module{
-    viewModel{ ListFragmentViewModel(get()) }
+    viewModel{ ListFragmentViewModel(get(), get()) }
 
     viewModelOf(::ListFragmentViewModel)
 }
