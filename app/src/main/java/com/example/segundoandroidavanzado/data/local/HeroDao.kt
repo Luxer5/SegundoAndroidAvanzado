@@ -5,6 +5,7 @@ import androidx.room.Delete
 import androidx.room.Insert
 import androidx.room.OnConflictStrategy
 import androidx.room.Query
+import androidx.room.Update
 import com.example.segundoandroidavanzado.data.local.model.HeroLocal
 
 @Dao
@@ -19,6 +20,9 @@ interface HeroDao {
 
     @Query("SELECT * FROM SuperHeroTable")
     suspend fun getFavorites(): List<HeroLocal>
+
+    @Update
+    suspend fun setFavorite(hero: HeroLocal)
 
     //Insertar los datos
     @Insert(onConflict = OnConflictStrategy.REPLACE)

@@ -1,4 +1,6 @@
 package com.example.segundoandroidavanzado.domain.useCase
 
-class MajeFavoriteUseCase {
+class MakeFavoriteUseCase {
+
+    //suspend fun invoke()
 }

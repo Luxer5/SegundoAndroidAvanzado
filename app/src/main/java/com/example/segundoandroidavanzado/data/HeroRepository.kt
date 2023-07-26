@@ -7,4 +7,6 @@ interface HeroRepository {
     suspend fun getHeroList(): List<HeroModel>
 
     suspend fun getHeroById(id: String): HeroModel
+
+    suspend fun setFavorite(hero: HeroModel)
 }

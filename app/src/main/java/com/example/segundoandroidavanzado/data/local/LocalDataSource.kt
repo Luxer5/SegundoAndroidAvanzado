@@ -8,4 +8,6 @@ interface LocalDataSource {
     suspend fun getHeroList() : List<HeroLocal>
 
     suspend fun getHeroById(id:String): HeroLocal
+
+    suspend fun setFavorite(hero:HeroLocal)
 }

@@ -30,4 +30,6 @@ class HeroRepositoryImpl(
     }
 
     override suspend fun getHeroById(id: String): HeroModel = localDataSource.getHeroById(id).toHeroModel()
+
+    override suspend fun setFavorite(hero: HeroModel)  = localDataSource.setFavorite(hero.toHeroLocal())
 }
