@@ -11,7 +11,7 @@ val pesentationModule = module{
 
     viewModelOf(::ListFragmentViewModel)
 
-    viewModel{ DetailViewModel(get(), get()) }
+    viewModel{ DetailViewModel(get(), get(), get(), get()) }
     viewModelOf(::DetailViewModel)
 
 

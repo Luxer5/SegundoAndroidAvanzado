@@ -8,4 +8,5 @@
     <string name="name">Nombre del heroe</string>
     <string name="description">Descripcion del heroe</string>
     <string name="date">Fecha de ultima aparicion</string>
+    <string name="user_location">La distancia hasta es %1s km</string>
 </resources>
