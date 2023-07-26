@@ -5,7 +5,7 @@ import java.time.LocalDateTime
 import java.util.Date
 
 data class LocationModel(
-    val date: String,
+    val date: String="",
     val longitud:Double,
     val latitud: Double
 )
