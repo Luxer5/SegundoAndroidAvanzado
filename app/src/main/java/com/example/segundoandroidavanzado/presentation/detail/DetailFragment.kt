@@ -40,7 +40,7 @@ class DetailFragment : Fragment() {
                 .into(binding.ivImagen)
         }
         detailViewModel.location.observe(viewLifecycleOwner){location ->
-            binding.tvDate.text = location.date
+            binding.tvLocation.text = "Latitud: ${location.latitud}, Longitud: ${location.longitud}"
         }
 
     }

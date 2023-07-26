@@ -34,10 +34,12 @@ class DetailViewModel(
     }
 
     private fun getLocation(id: String) = viewModelScope.launch {
-        val result = withContext(Dispatchers.IO){
-            getHeroLocationUseCase.invoke(id)
-        }
-        _location.value = result
+        try {
+            val result = withContext(Dispatchers.IO){
+                getHeroLocationUseCase.invoke(id)
+            }
+            _location.value = result
+        }catch (_: Throwable){} //Error silencioso
     }
 
     private fun getHero(id: String) = viewModelScope.launch {
