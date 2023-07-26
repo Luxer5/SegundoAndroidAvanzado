@@ -1,5 +1,7 @@
 package com.example.segundoandroidavanzado.data.remote
 
+import IdDto
+import LocationDto
 import com.example.segundoandroidavanzado.data.dto.HeroDTO
 import com.example.segundoandroidavanzado.data.dto.SearchDto
 import retrofit2.http.Body
@@ -12,4 +14,8 @@ interface SuperHeroApi {
     @POST("api/heros/all")
     @Headers("Authorization: Bearer $TOKEN")
     suspend fun getHeroList(@Body searchDto: SearchDto): List<HeroDTO>
+
+    @POST("api/heros/locations")
+    @Headers("Authorization: Bearer $TOKEN")
+    suspend fun getLocationList(@Body idDto: IdDto): List<LocationDto>
 }

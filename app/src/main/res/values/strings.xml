@@ -7,4 +7,5 @@
     <string name="nombre_heroe_placeholder">Nombre Heroe</string>
     <string name="name">Nombre del heroe</string>
     <string name="description">Descripcion del heroe</string>
+    <string name="date">Fecha de ultima aparicion</string>
 </resources>

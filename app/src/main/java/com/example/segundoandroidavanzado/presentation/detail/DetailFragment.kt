@@ -9,7 +9,6 @@ import android.view.ViewGroup
 import androidx.navigation.fragment.navArgs
 import com.bumptech.glide.Glide
 import com.bumptech.glide.load.engine.DiskCacheStrategy
-import com.example.segundoandroidavanzado.R
 import com.example.segundoandroidavanzado.databinding.FragmentDetailBinding
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
@@ -29,7 +28,7 @@ class DetailFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         Log.d("Detail",args.heroId)
-        detailViewModel.getHero(args.heroId)
+        detailViewModel.getData(args.heroId)
         detailViewModel.hero.observe(viewLifecycleOwner){hero ->
             binding.name.text = hero.name
             binding.description.text = hero.description
@@ -40,5 +39,9 @@ class DetailFragment : Fragment() {
                 .centerCrop()
                 .into(binding.ivImagen)
         }
+        detailViewModel.location.observe(viewLifecycleOwner){location ->
+            binding.tvDate.text = location.date
+        }
+
     }
 }

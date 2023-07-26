@@ -6,6 +6,7 @@ class TestDataBuilder() {
     var photoUrl = ""
     var description = ""
     var numElements: Int = 1
+    var favorite = false
 
     fun withName(name: String): TestDataBuilder{
         this.name =  name
@@ -23,7 +24,7 @@ class TestDataBuilder() {
     fun build():List<HeroModel>{
         val list = mutableListOf<HeroModel>()
         for(i in 0 .. numElements){
-            list.add(HeroModel(id,name, photoUrl, description))
+            list.add(HeroModel(id,name, photoUrl, description, favorite))
         }
         return list.toList()
     }
